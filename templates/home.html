@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chronic Kidney Disease Detection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif, Tahoma, Geneva, Verdana;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      color: #333
+    }
+    .container {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 500px;
+      overflow-y: auto;
+    }
+    h2 { text-align: center; color: #444; margin-bottom: 20px; }
+    label { display: block; margin: 10px 0 5px; font-weight: bold; color: #555 }
+    input, select {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    input:focus, select:focus { border-color: #007bff; outline: none; }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s
+    }
+    button:hover { background: #218838; }
+    .section-title{
+        margin-top: 15px;
+      font-weight: bold;
+      color: #555;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Chronic Kidney Disease Detection</h2>
+    <form action="/predict" method="post">
+
+      <!-- Numeric inputs -->
+       <div class="section-title">Numeric Inputs</div>
+      <label for="age">Age</label>
+      <input type="number" step="0.1" name="age" required>
+
+      <label for="bp">Blood Pressure</label>
+      <input type="number" step="0.1" name="bp" required>
+
+      <label for="sg">Specific Gravity (sg)</label>
+      <input type="number" step="0.01" name="sg" required>
+
+      <label for="al">Albumin (al)</label>
+      <input type="number" step="0.1" name="al" required>
+
+      <label for="su">Sugar (su)</label>
+      <input type="number" step="0.1" name="su" required>
+
+      <label for="bgr">Blood Glucose Random (bgr)</label>
+      <input type="number" step="0.1" name="bgr" required>
+
+      <label for="bu">Blood Urea (bu)</label>
+      <input type="number" step="0.1" name="bu" required>
+
+      <label for="sc">Serum Creatinine (sc)</label>
+      <input type="number" step="0.01" name="sc" required>
+
+      <label for="sod">Sodium (sod)</label>
+      <input type="number" step="0.1" name="sod" required>
+
+      <label for="pot">Potassium (pot)</label>
+      <input type="number" step="0.1" name="pot" required>
+
+      <label for="hemo">Hemoglobin (hemo)</label>
+      <input type="number" step="0.1" name="hemo" required>
+
+      <label for="pcv">PCV</label>
+      <input type="number" step="0.1" name="pcv" required>
+
+      <label for="wc">WBC Count (wc)</label>
+      <input type="number" step="0.1" name="wc" required>
+
+      <label for="rc">RBC Count (rc)</label>
+      <input type="number" step="0.1" name="rc" required>
+
+      <!-- Categorical inputs -->
+      <label for="rbc">Red Blood Cells (rbc)</label>
+      <select name="rbc" required>
+        <option value="normal">Normal</option>
+        <option value="abnormal">Abnormal</option>
+      </select>
+
+      <label for="pc">Pus Cell (pc)</label>
+      <select name="pc" required>
+        <option value="normal">Normal</option>
+        <option value="abnormal">Abnormal</option>
+      </select>
+
+      <label for="pcc">Pus Cell Clumps (pcc)</label>
+      <select name="pcc" required>
+        <option value="notpresent">Not Present</option>
+        <option value="present">Present</option>
+      </select>
+
+      <label for="ba">Bacteria (ba)</label>
+      <select name="ba" required>
+        <option value="notpresent">Not Present</option>
+        <option value="present">Present</option>
+      </select>
+
+      <label for="htn">Hypertension (htn)</label>
+      <select name="htn" required>
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
+
+      <label for="dm">Diabetes Mellitus (dm)</label>
+      <select name="dm" required>
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
+
+      <label for="cad">Coronary Artery Disease (cad)</label>
+      <select name="cad" required>
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
+
+      <label for="appet">Appetite (appet)</label>
+      <select name="appet" required>
+        <option value="good">Good</option>
+        <option value="poor">Poor</option>
+      </select>
+
+      <label for="pe">Pedal Edema (pe)</label>
+      <select name="pe" required>
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
+
+      <label for="ane">Anemia (ane)</label>
+      <select name="ane" required>
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
+
+      <button type="submit">Predict</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chronic Kidney Disease Prediction Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif, Tahoma, Geneva, Verdana;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #333
+    }
+    .container {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 15px;
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 400px;
+      max-width: 450px;
+    }
+    h2 {
+      margin-bottom: 25px;
+      color: #444;
+    }
+    .result-box {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #007bff;
+      padding: 20px
+    }
+    .ckd { background-color: #e57373; }       /* soft red */
+    .no-ckd { background-color: #81c784; }    /* soft green */
+    .confidence {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 25px
+    }
+    img {
+      width: 120px;
+      height: auto;
+      margin: 15px 0;
+    }
+    button {
+        display: inline-block;
+      cursor: pointer;
+      margin-top: 20px;
+      padding: 10px 15px;
+      background: #007bff;
+      color: white;
+      border-radius: 8px;
+      font-size: 16px;
+      border: none;
+      text-decoration: none;
+      transition: 0.3s
+    }
+    a:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Chronic Kidney Disease Prediction Result</h2>
+
+    {% if "Oops" in prediction %}
+      <div class="result-box ckd">{{ prediction }}</div>
+       <img src="{{ url_for('static', filename='danger.jpg') }}" alt="Danger" class="result-img">
+    {% else %}
+      <div class="result-box no-ckd">{{ prediction }}</div>
+            <img src="{{ url_for('static', filename='happy.jpg') }}" alt="Happy" class="result-img">
+    {% endif %}
+     <div class="confidence">Confidence: {{ confidence }}%</div>
+    <a href="/">🔙 Back to Home</a>
+  </div>
+</body>
+</html>
