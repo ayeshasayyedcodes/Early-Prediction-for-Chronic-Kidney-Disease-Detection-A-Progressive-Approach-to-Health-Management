@@ -49,7 +49,7 @@ htn: yes, dm: yes, cad: yes, appet: poor, pe: yes, ane: yes
 
 📌 Here’s a quick demo of the CKD Detection Project:
 
-[🎥 Watch Demo](Demo.mp4)
+[🎥 Watch Demo]()
 
 ## 🚀 Future Enhancements
 
@@ -81,7 +81,8 @@ Results Page
 
 Here’s how the prediction results look:
 
-![Result - Healthy](screenshots/result_good.png)
-![Result - CKD Detected](screenshots/result_bad.png)
+![Result - Healthy](Screenshots/result_good.png)
+![Result - CKD Detected](Screenshots/result_bad.png)
 
 |
+
