@@ -69,10 +69,10 @@ Ayesha Sayyed
 Homepage
 
 Here are some views of the homepage form:
-![Homepage 1](screenshots/home1.png)
-![Homepage 2](screenshots/home2.png)
-![Homepage 3](screenshots/home3.png)
-![Homepage 4](screenshots/home4.png)
+![Homepage 1](Screenshots/home1.png)
+![Homepage 2](Screenshots/home2.png)
+![Homepage 3](Screenshots/home3.png)
+![Homepage 4](Screenshots/home4.png)
 
 	
 
@@ -83,4 +83,5 @@ Here’s how the prediction results look:
 
 ![Result - Healthy](screenshots/result_good.png)
 ![Result - CKD Detected](screenshots/result_bad.png)
+
 |
